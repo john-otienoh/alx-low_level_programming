@@ -15,8 +15,11 @@ int main(void)
 	while (digit <= '9')
 	{
 		putchar(digit);
-		putchar(',');
-		putchar(' ');
+		if (digit <= '8')
+		{
+			putchar(',');
+			putchar(' ');
+		}
 		digit++;
 	}
 	putchar('\n');
