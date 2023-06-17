@@ -1,12 +1,13 @@
-#include<stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 
 /**
- * main - prints a random number and states whether it is
- * positive, negative or zero
+ * main - program will assign a random number to the variable n
+ * in order to print whether the number stored in the
+ * in the variable n is positive or negative.
  *
- * Return: Always 0 (Success)
+ * Return: Always 0(Success)
  */
 
 int main(void)
@@ -17,16 +18,10 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 	if (n > 0)
-	{
-		printf("%d is positve\n", n);
-	}
-	if (n < 0)
-	{
+		printf("%d is positive\n", n);
+	else if (n < 0)
 		printf("%d is negative\n", n);
-	}
-	if (n == 0)
-	{
+	else
 		printf("%d is zero\n", n);
-	}
 	return (0);
 }
