@@ -7,12 +7,14 @@
 int main(void)
 {
 	char  print[] = "_putchar";
-	int i;
+	int i = 0;
 
-	for (i = 0; i != '\0'; i++)
+	while (print[i] != '\0')
 	{
 		_putchar(print[i]);
+		i++;
 	}
 	_putchar('\n');
+
 	return (0);
 }
