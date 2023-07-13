@@ -21,8 +21,8 @@ int main(void)
 		if (i < 49)
 		{
 			putchar(',');
+			putchar(' ');
 		}
-		putchar(' ');
 	}
 	putchar('\n');
 	return (0);
