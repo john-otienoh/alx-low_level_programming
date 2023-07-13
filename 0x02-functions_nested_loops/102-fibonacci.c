@@ -6,17 +6,18 @@
  */
 int main(void)
 {
-	int a = 1;
-	int b = 2;
-	int i, c;
+	long int a = 1;
+	long int b = 2;
+	int i; 
+	long int c;
 
-	printf("%d, %d, ", a, b);
+	printf("%lu, %lu, ", a, b);
 	for (i = 0; i <= 50; i++)
 	{
 		c = a + b;
 		a = b;
 		b = c;
-		printf("%d", c);
+		printf("%lu", c);
 		putchar(',');
 		putchar(' ');
 	}
