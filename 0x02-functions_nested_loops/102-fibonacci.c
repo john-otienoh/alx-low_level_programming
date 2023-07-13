@@ -18,7 +18,10 @@ int main(void)
 		a = b;
 		b = c;
 		printf("%lu", c);
-		putchar(',');
+		if (i < 49)
+		{
+			putchar(',');
+		}
 		putchar(' ');
 	}
 	putchar('\n');
