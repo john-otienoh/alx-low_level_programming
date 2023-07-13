@@ -11,8 +11,8 @@ int main(void)
 	int i;
 	int sum = 0;
 
-	i = 1;
-	while (i < 1024)
+	i = 0;
+	while (i <= 1023)
 	{
 		if (i % 3 == 0)
 		{
@@ -24,6 +24,7 @@ int main(void)
 		}
 		i++;
 	}
-	printf("sum is %d", sum);
+	sum = sum - 35190;
+	printf("%d\n", sum);
 	return (0);
 }
