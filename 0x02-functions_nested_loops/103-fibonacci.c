@@ -17,7 +17,7 @@ int main(void)
 		b = c;
 		if (c % 2 == 0)
 		{
-		    sum = sum + c;
+			sum = sum + c;
 		}
 	}
 	printf("%d", sum + 2);
