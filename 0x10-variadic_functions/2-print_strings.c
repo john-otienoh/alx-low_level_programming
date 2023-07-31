@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
- * print_sings - Prints sings, followed by a new line.
+ * print_strings - Prints sings, followed by a new line.
  * @separator: The sing to be printed between sings.
  * @n: The number of sings passed to the function.
  * @...: A variable number of sings to be printed.
