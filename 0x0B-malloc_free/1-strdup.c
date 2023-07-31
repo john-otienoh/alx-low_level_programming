@@ -24,12 +24,11 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	i = 0;
-	while (str[i] != '\0')
+	while (str[len_gth] != '\0')
 	{
-		mal_loc[i] = str[i];
-		i++;
+		mal_loc[len_gth] = str[len_gth];
+		len_gth++;
 	}
-	mal_loc[i] = '\0';
+	mal_loc[len_gth] = '\0';
 	return (mal_loc);
 }
