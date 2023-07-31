@@ -32,7 +32,7 @@ int is_prime_number(int n)
 /**
  * prime_num - helper function
  * @n: number given to the function "is_prime_number"
- * @div: incrementer 
+ * @div: incrementer
  * Return: 0 if not prime, 1 if prime
  */
 

@@ -17,7 +17,7 @@ int _sqrt_recursion(int n)
 }
 
 /**
- * sqrt_func - helper function 
+ * sqrt_func - helper function
  * @sq: number to determine if square root
  * @n:  int number
  * Return: square root if natural square root, or -1 if none found
