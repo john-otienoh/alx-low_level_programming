@@ -18,6 +18,10 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
+	if (mal_loc == NULL)
+	{
+		return (0);
+	}
 	count = 0;
 	while (count < size)
 	{
