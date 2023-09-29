@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * is_palindrome() - Function that returns 1 if a string is a palindrome and 0 if not.
+ * is_palindrome - Function that returns 1 if a string is a palindrome and 0 if not.
  * @s: pointer to a string
  *
  * Return: 1 if palindrome, else 0.
