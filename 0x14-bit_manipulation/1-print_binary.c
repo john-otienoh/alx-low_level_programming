@@ -5,12 +5,15 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int i, j;
 
-	j = 1 << 31;
-	for (i = 1; i <= 32; ++i)
+	if (n == 0 || n == 1)
 	{
-		_putchar(n & j ? '1' : '0');
-		n <<= 1;
+		_putchar(n + '0');
+	}
+	else
+	{
+
+		print_binary(n >> 1);
+		_putchar((n & 1) + '0');
 	}
 }

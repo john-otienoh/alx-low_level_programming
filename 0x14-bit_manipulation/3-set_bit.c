@@ -9,13 +9,10 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int bin;
-
-	t_binary = (sizeof(*(n)) * 8);
-	if (index < bin)
-	{
-		*(n) = ((1 << index) | *(n));
-		return (1);
-	}
+	if (index > 31)
 	return (-1);
+
+	*n = *n | 1 << index;
+	return (1);
+
 }
