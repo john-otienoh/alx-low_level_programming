@@ -8,6 +8,8 @@
  */
 int main(void)
 {
-    printf("%d\n", _strlen("My Dyn Lib"));
+/*    char *word = "My Dyn Lib";
+    int len = _strlen(word);
+    printf("%d\n", len);*/
     return (EXIT_SUCCESS);
 }
