@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	long long n, i;
+	unsigned long long int n, i;
 
 	n = 612852475143;
 	for (i = 2; i < n; i++)
@@ -16,6 +16,6 @@ int main(void)
 			n = n / i;
 		}
 	}
-	printf("%lu\n", n);
+	printf("%llu\n", n);
 	return (0);
 }
