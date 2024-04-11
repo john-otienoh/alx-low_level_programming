@@ -1,5 +1,5 @@
 # make -f 2-Makefile
-C = gcc
+CC = gcc
 SRC = main.c school.c
 OBJ = ${SRC:%.c=%.o}
 NAME = school
