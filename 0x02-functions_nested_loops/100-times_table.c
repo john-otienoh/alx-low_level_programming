@@ -5,38 +5,41 @@
  */
 void print_times_table(int n)
 {
-	int col = 0, row = 0, unit = 0, tens = 0, m = 0;
+	int col = 0, row = 0, m = 0;
 
 	if (n < 16 && n >= 0)
 	{
-		while (row <= n)
+		for (row = 0; row <= n; row++)
 		{
-			while (col <= n)
+			for (col = 0; col <= n; col++)
 			{
 				m = col * row;
-				unit = m % 10;
-				tens = (m - unit) / 10;
-				if (col > 0)
-				{
-					_putchar(' ');
-					if (tens <= 0)
-					{
-						_putchar(' ');
-					}
-					else
-					{
-						_putchar(tens + '0');
-					}
-				}
-				_putchar(unit + '0');
-				if (col < n)
+				if (col == 0)
+					_putchar(m + '0');
+				else if (m < 10 && col != 0)
 				{
 					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(m + '0');
 				}
-				col++;
+				else if (m >= 10 && m < 100)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar((m / 10) + '0');
+					_putchar((m % 10) + '0');
+				} else if (m >= 100)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar((m / 100) + '0');
+					_putchar(((m / 10) % 10) + '0');
+					_putchar((m % 10) + '0');
+				}
 			}
-			col = 0;
-			row++;
 			_putchar('\n');
 		}
 	}

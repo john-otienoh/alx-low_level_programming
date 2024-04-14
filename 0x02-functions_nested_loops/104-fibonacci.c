@@ -6,17 +6,17 @@
  */
 int main(void)
 {
-	unsigned long long int a = 1;
-	unsigned long long b = 2;
-	unsigned long long int i, c;
+	unsigned long int a = 1;
+	unsigned long b = 2;
+	unsigned long int i, c;
 
-	printf("%llu, %llu, ", a, b);
+	printf("%lu, %lu, ", a, b);
 	for (i = 0; i <= 98; i++)
 	{
 		c = a + b;
 		a = b;
 		b = c;
-		printf("%llu", c);
+		printf("%lu", c);
 		putchar(',');
 		putchar(' ');
 	}
