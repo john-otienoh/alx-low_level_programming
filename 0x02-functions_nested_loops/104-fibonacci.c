@@ -7,8 +7,8 @@
 int main(void)
 {
 	unsigned long int a = 1;
-	unsigned long b = 2;
-	unsigned long j1, j2, k1, k2, i;
+	unsigned long int b = 2;
+	unsigned long int j1, j2, k1, k2, i;
 
 	printf("%lu", a);
 	for (i = 1; i <= 91; i++)
