@@ -6,6 +6,7 @@
  *    */
 void print_times_table(int n)
 {
+<<<<<<< HEAD
 	int i, j, k;
 	
 	if (n >= 0 && n <= 15)
@@ -44,4 +45,44 @@ void print_times_table(int n)
 																		_putchar('\n');
 																				}
 									}
+=======
+	int col = 0, row = 0, m = 0;
+
+	if (n < 16 && n >= 0)
+	{
+		for (row = 0; row <= n; row++)
+		{
+			for (col = 0; col <= n; col++)
+			{
+				m = col * row;
+				if (col == 0)
+					_putchar(m + '0');
+				else if (m < 10 && col != 0)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(m + '0');
+				}
+				else if (m >= 10 && m < 100)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar((m / 10) + '0');
+					_putchar((m % 10) + '0');
+				} else if (m >= 100)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar((m / 100) + '0');
+					_putchar(((m / 10) % 10) + '0');
+					_putchar((m % 10) + '0');
+				}
+			}
+			_putchar('\n');
+		}
+	}
+>>>>>>> ed4a38257a4d8907a89a54418dd33b66bc60f252
 }
