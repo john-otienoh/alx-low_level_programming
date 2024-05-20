@@ -1,43 +1,47 @@
 #include "main.h"
+
 /**
- * print_times_table - function that prints the n times table, starting with 0.
- * @n: size of the table
- */
+ *  * print_times_table - prints the n times table, starting with 0
+ *   * @n: number of the times table
+ *    */
 void print_times_table(int n)
 {
-	int col = 0, row = 0, unit = 0, tens = 0, m = 0;
-
-	if (n < 16 && n >= 0)
+	int i, j, k;
+	
+	if (n >= 0 && n <= 15)
 	{
-		while (row <= n)
+		for (i = 0; i <= n; i++)
 		{
-			while (col <= n)
-			{
-				m = col * row;
-				unit = m % 10;
-				tens = (m - unit) / 10;
-				if (col > 0)
-				{
-					_putchar(' ');
-					if (tens <= 0)
-					{
-						_putchar(' ');
-					}
-					else
-					{
-						_putchar(tens + '0');
-					}
-				}
-				_putchar(unit + '0');
-				if (col < n)
-				{
-					_putchar(',');
-				}
-				col++;
-			}
-			col = 0;
-			row++;
-			_putchar('\n');
-		}
-	}
+			for (j = 0; j <= n; j++)
+																			{
+																								k = j * i;
+																												if (j == 0)
+																																	{
+																																							_putchar(k + '0');
+																																											} else if (k < 10 && j != 0)
+																																																{
+																																																						_putchar(',');
+																																																											_putchar(' ');
+																																																																_putchar(' ');
+																																																																					_putchar(' ');
+																																																																										_putchar(k + '0');
+																																																																														} else if (k >= 10 && k < 100)
+																																																																																			{
+																																																																																									_putchar(',');
+																																																																																														_putchar(' ');
+																																																																																																			_putchar(' ');
+																																																																																																								_putchar((k / 10) + '0');
+																																																																																																													_putchar((k % 10) + '0');
+																																																																																																																	} else if (k >= 100)
+																																																																																																																						{
+																																																																																																																												_putchar(',');
+																																																																																																																																	_putchar(' ');
+																																																																																																																																						_putchar((k / 100) + '0');
+																																																																																																																																											_putchar(((k / 10) % 10) + '0');
+																																																																																																																																																_putchar((k % 10) + '0');
+																																																																																																																																																				}
+																																																																																																																				}
+																		_putchar('\n');
+																				}
+									}
 }
