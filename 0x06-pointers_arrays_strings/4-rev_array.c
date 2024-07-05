@@ -7,18 +7,15 @@
  */
 void reverse_array(int *a, int n)
 {
-	int i;
-	int count = 0;
+	int i, j, temp;
 
-	for (i = (n - 1); i >= 0; i--)
+	for (i = 0; i < n - 1; i++)
 	{
-		count++;
-		printf("%d", a[i]);
-		if (count < n)
+		for (j = i + 1; j > 0; j--)
 		{
-			printf(",");
-			printf(" ");
+			temp = *(a + j);
+			*(a + j) = *(a + (j - 1));
+			*(a + (j - 1)) = temp;
 		}
 	}
-	printf("\n");
 }
