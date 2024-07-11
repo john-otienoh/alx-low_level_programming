@@ -1,26 +1,31 @@
 #include <stdio.h>
 /**
- * main - program that prints the first 50 Fibonacci numbers,
- * starting with 1 and 2,
- * Return: Always 0
+ * main - finds and prints the first 98 Fibonacci numbers,
+ * starting with 1 and 2
+ * followed by a new line
+ * Return: ALways 0 (Success)
  */
 int main(void)
 {
-	unsigned long int a = 1;
-	unsigned long int b = 2;
-	unsigned long int j1, j2, k1, k2, i;
+	unsigned long int i, j, k, j1, j2, k1, k2;
 
-	printf("%lu", a);
-	for (i = 1; i <= 91; i++)
+	j = 1;
+	k = 2;
+
+	printf("%lu", j);
+
+	for (i = 1; i < 91; i++)
 	{
-		printf(", %lu", b);
-		b = b + a;
-		a = b - a;
+		printf(", %lu", k);
+		k = k + j;
+		j = k - j;
 	}
-	j1 = a / 1000000000;
-	j2 = a % 1000000000;
-	k1 = b / 1000000000;
-	k2 = b % 1000000000;
+
+	j1 = j / 1000000000;
+	j2 = j % 1000000000;
+	k1 = k / 1000000000;
+	k2 = k % 1000000000;
+
 	for (i = 92; i < 99; ++i)
 	{
 		printf(", %lu", k1 + (k2 / 1000000000));
@@ -30,6 +35,8 @@ int main(void)
 		k2 = k2 + j2;
 		j2 = k2 - j2;
 	}
-	putchar('\n');
+
+	printf("\n");
+
 	return (0);
 }
