@@ -1,6 +1,6 @@
 #include "stdio.h"
 /**
- * int factorial() - Function that returns the factorial of a given number.
+ * factorial - Function that returns the factorial of a given number.
  *
  * @n: integer variable.
  * Return: -1 to indicate error, else 0.
